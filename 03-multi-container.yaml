@@ -1,6 +1,6 @@
 kind: Pod
 apiVersion: v1
-metadat:
+metadata:
   name: multi-containers
 spec:
   containers:
@@ -9,3 +9,4 @@ spec:
   - name: almalinux
     image: almalinux:9
     command: ["sleep 100"]
+
