@@ -1,5 +1,5 @@
 # labels are key value pairs used for filtering the images, in dockerfile of docker labels are optional but in kubernetes pods labels are mandatory
-kind: pod
+kind: Pod
 apiVersion: v1
 metadata:
   name: labels
