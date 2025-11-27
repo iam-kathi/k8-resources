@@ -1,7 +1,11 @@
 apiVersion: v1
-kind: Configmap
+kind: ConfigMap
 metadata:
-  name: nginx-Config
+  name: pod-config
+  labels:
+    purpose: config
+    env: dev
 data:
-  course: devops
-  duration: "20hr"
+  COURSE: "DevOps with AWS"
+  DURATION: "120HRS"
+  TRAINER: "SIVAKUMAR REDDY M"
