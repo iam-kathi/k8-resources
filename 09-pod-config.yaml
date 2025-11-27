@@ -11,9 +11,9 @@ spec:
       valueFrom: 
         configMapKeyRef:
           name: pod-config # name of the configmap you are refering to
-          key: course # env.name and config map key name can be different
+          key: COURSE # env.name and config map key name can be different
     - name: duration
       valueFrom:
         configMapKeyRef:
           name: pod-config
-          key: duration
+          key: DURATION
