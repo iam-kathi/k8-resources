@@ -15,15 +15,15 @@ spec:
       port: 80 # service port
       targetPort: 80 # container port
 ---
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx-lb
-  labels:
-    purpose: service-lb-demo
-    project: roboshop
-    environment: dev
-spec:
-  containers:
-  - name: nginx
-    image: nginx
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: nginx-lb
+#   labels:
+#     purpose: service-lb-demo
+#     project: roboshop
+#     environment: dev
+# spec:
+#   containers:
+#   - name: nginx
+#     image: nginx
