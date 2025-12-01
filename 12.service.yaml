@@ -13,16 +13,16 @@ spec:
     - protocol: TCP
       port: 80 # service port
       targetPort: 80 # container port
----
-apiVersion: v1
-kind: Pod
-metadata:
-  name: nginx
-  labels:
-    purpose: service-demo
-    project: expense
-    environment: dev
-spec:
-  containers:
-  - name: nginx
-    image: nginx
+# ---
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: nginx
+#   labels:
+#     purpose: service-demo
+#     project: expense
+#     environment: dev
+# spec:
+#   containers:
+#   - name: nginx
+#     image: nginx
