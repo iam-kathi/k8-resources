@@ -21,7 +21,7 @@ metadata:
   name: nginx-lb
   labels:
     purpose: service-lb-demo
-    project: roboshop
+    project: expense
     environment: dev
 spec:
   containers:
