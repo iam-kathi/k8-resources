@@ -8,7 +8,7 @@ spec:
   type: NodePort
   selector:
     purpose: service-np-demo
-    project: roboshop
+    project: expense
     environment: dev
   ports:
     - protocol: TCP
