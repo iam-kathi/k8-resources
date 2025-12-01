@@ -7,5 +7,5 @@ metadata:
     env: dev
 data:
   COURSE: "DevOps with AWS"
-  DURATION: "120HRS"
-  TRAINER: "SIVAKUMAR REDDY M"
+  DURATION: "100HRS"
+  TRAINER: "BHARATH REDDY K"
