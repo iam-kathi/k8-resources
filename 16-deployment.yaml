@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:trixie-perl
+        image: nginx:mainline-trixie-perl
 
 ---
 apiVersion: v1
