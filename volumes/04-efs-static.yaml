@@ -8,7 +8,7 @@ spec:
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
-  storageClassName: ""
+  storageClassName: "" # This should be empty in static provisioning
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
@@ -31,13 +31,14 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: efs-static
-  labels: 
-    purpose: efs-static
+  labels:
+    purpose: efs-static-demo
+    project: expense
 spec:
   containers:
   - name: nginx
     image: nginx
-    volumeMounts:  #docker run -v hostpath:containerpath
+    volumeMounts: # docker run -v host-path:container-path
     - name: expense-efs
       mountPath: /usr/share/nginx/html
   volumes:
@@ -48,14 +49,20 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: efs-static
+  labels:
+    purpose: efs-static-demo
+    project: expense
 spec:
   type: LoadBalancer
   selector:
-    purpose: efs-static
+    purpose: efs-static-demo
+    project: expense
   ports:
-    - name: nginx-svc-port
-      protocol: TCP
-      port: 30 # service port
+    - protocol: TCP
+      port: 80 # service port
       targetPort: 80 # container port
       nodePort: 30007
+
+
+
